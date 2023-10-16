@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 
-const { MONODB_USERNAME, MONODB_PASSWORD } = process.env;
+const { MONGODB_USERNAME, MONGODB_PASSWORD } = process.env;
 
 export const ConnectionStr =
   "mongodb+srv://" +
-  MONODB_USERNAME +
+  MONGODB_USERNAME +
   ":" +
-  MONODB_PASSWORD +
+  MONGODB_PASSWORD +
   "@cluster.hutm20z.mongodb.net/discord";
 
 export const DBConnect = async (): Promise<{
