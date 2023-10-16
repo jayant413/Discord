@@ -1,32 +1,9 @@
-import mongoose from "mongoose";
+import { PrismaClient } from "@prisma/client";
 
-const { MONGODB_USERNAME, MONGODB_PASSWORD } = process.env;
+declare global {
+  var prisma: PrismaClient | undefined;
+}
 
-export const ConnectionStr =
-  "mongodb+srv://" +
-  MONGODB_USERNAME +
-  ":" +
-  MONGODB_PASSWORD +
-  "@cluster.hutm20z.mongodb.net/discord";
+export const db = globalThis.prisma || new PrismaClient();
 
-export const DBConnect = async (): Promise<{
-  status: boolean;
-  message: string;
-}> => {
-  let connection: { status: boolean; message: string };
-
-  try {
-    await mongoose.connect(ConnectionStr);
-    connection = {
-      status: true,
-      message: "Database connection established",
-    };
-  } catch (err) {
-    connection = {
-      status: false,
-      message: err instanceof Error ? err.message : "An error occurred",
-    };
-  }
-
-  return connection;
-};
+if (process.env.NODE_ENV !== "production") globalThis.prisma = db;
