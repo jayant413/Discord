@@ -3,6 +3,8 @@ import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { initialProfile } from "@/lib/initial-profile";
 import { InitialModal } from "@/components/modals/initial-modal";
+import { UserButton } from "@clerk/nextjs";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const SetupPage = async () => {
   const profile = await initialProfile();
@@ -22,6 +24,15 @@ const SetupPage = async () => {
   }
 
   return <InitialModal />;
+  // return (
+  //   <div>
+  //     Setup Page
+  //     <div>
+  //       <UserButton afterSignOutUrl="/" />
+  //       <ModeToggle />
+  //     </div>
+  //   </div>
+  // );
 };
 
 export default SetupPage;
