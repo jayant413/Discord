@@ -1,5 +1,9 @@
 ### 1hr:46min Initial modal ui - 10th oct
 
+### 2hr:25min Upload thing setup - 11th oct
+
+### 2hr:50min Create Server API , Navigation SideBar - 11th oct
+
 ```
 npx prisma studio
 ```
