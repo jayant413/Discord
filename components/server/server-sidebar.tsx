@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
 
-// import { ServerHeader } from "./server-header";
+import { ServerHeader } from "./server-header";
 // import { ServerSearch } from "./server-search";
 // import { ServerSection } from "./server-section";
 // import { ServerChannel } from "./server-channel";
@@ -82,10 +82,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
 
   return (
     <div className="flex flex-col h-full text-primary w-full dark:bg-[#2B2D31] bg-[#F2F3F5]">
-      {/* <ServerHeader
-        server={server}
-        role={role}
-      /> */}
+      <ServerHeader server={server} role={role} />
       <ScrollArea className="flex-1 px-3">
         <div className="mt-2">
           {/* <ServerSearch
