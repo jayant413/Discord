@@ -6,6 +6,8 @@
 
 ### 3hr:20min Create-server-modal 18th oct
 
+### 5hr:4min Create : Manage memebers
+
 ```
 npx prisma studio
 ```
