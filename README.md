@@ -8,6 +8,8 @@
 
 ### 5hr:4min Create : Manage memebers
 
+### 5hr:44min Create : Create Channel , Delete Server , Leave Server
+
 ```
 npx prisma studio
 ```
