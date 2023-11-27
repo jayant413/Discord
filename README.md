@@ -19,3 +19,5 @@ npx prisma migrate reset
 npx prisma generate
 npx prisma db push
 ```
+
+### 7hr:30min Server Channel list , Edit channel , Delete channel , Channel Id page , Member Id page
